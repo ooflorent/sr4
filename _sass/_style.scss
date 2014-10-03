@@ -1,0 +1,123 @@
+$font-family-sans-serif: Lato, "Lucida Grande", Verdana, sans-serif;
+$font-family-serif:      Lora, Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$font-size-base: 18px;
+$font-size-post: 20px;
+$font-size-h1:   60px;
+$font-size-h2:   36px;
+$font-size-h3:   30px;
+
+$color-black: rgba(0, 0, 0, .8);
+$color-gray:  rgba(0, 0, 0, .45);
+
+* {
+  box-sizing:  border-box;
+}
+
+// Tables
+// ------
+
+table {
+  background: #f7f7f7;
+  border-collapse: separate;
+  border-spacing: 20px 10px;
+}
+
+th, td:first-child > strong {
+  font-family: $font-family-serif;
+  text-align: right;
+  white-space: nowrap;
+}
+
+td:first-child > strong {
+  display: block;
+  text-align: right;
+}
+
+th, td {
+  vertical-align: top;
+  font-size: 18px;
+}
+
+// Typography
+// ----------
+
+body {
+  color: $color-black;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+
+  strong, em {
+    font-style: normal;
+    font-weight: inherit;
+  }
+}
+
+h1 {
+  font-size: $font-size-h1;
+  font-weight: 700;
+  line-height: 1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+  font-weight: 700;
+}
+
+h3 {
+  color: $color-gray;
+  font-size: $font-size-h3;
+  font-weight: 300;
+  margin: 40px 0 4px;
+}
+
+code, pre {
+  font-family: $font-family-monospace;
+}
+
+.post {
+  font-family: $font-family-serif;
+  font-size: 20px;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 140px;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 40px 0 4px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
+      margin-top: -4px;
+    }
+  }
+
+  blockquote, p, table {
+    margin: 0 0 30px;
+  }
+
+  blockquote {
+    border-left: 3px solid $color-black;
+    font-style: italic;
+    padding-left: 20px;
+    margin-left: -23px;
+
+    em {
+      font-style: normal;
+    }
+  }
+}
+
+.post-title {
+  margin-bottom: 70px;
+}

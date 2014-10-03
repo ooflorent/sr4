@@ -4,6 +4,11 @@ title: SR4
 ---
 
 <ul>
+  {% for rule in site.rules %}
+    <li>
+      <a href="{{ site.baseurl }}{{ rule.url }}">{{ rule.title }}</a>
+    </li>
+  {% endfor %}
   {% for post in site.posts %}
     <li>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
